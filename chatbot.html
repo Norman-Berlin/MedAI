@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>MedAI | Medical Assistant</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chatbot CSS -->
+    <link rel="stylesheet"
+          href="css/chatbot.css">
+
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     CHATBOT NAVBAR
+========================= -->
+
+<nav class="chat-navbar">
+
+    <div class="chat-brand">
+
+        <a href="index.html">
+
+            <i class="fa-solid fa-heart-pulse"></i>
+
+            <span>
+                Med<span>AI</span>
+            </span>
+
+        </a>
+
+    </div>
+
+
+    <div class="navbar-actions">
+
+        <button
+            class="new-chat-btn"
+            id="newChatBtn">
+
+            <i class="fa-solid fa-plus"></i>
+
+            New Assessment
+
+        </button>
+
+
+        <a href="index.html"
+           class="back-home">
+
+            <i class="fa-solid fa-arrow-left"></i>
+
+            Home
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- =========================
+     MAIN CHAT AREA
+========================= -->
+
+<main class="chat-page">
+
+    <div class="chat-container">
+
+
+        <!-- =========================
+             CHAT HEADER
+        ========================= -->
+
+        <div class="chat-header">
+
+            <div class="assistant-profile">
+
+                <div class="assistant-avatar">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                    <span class="online-dot"></span>
+
+                </div>
+
+
+                <div>
+
+                    <h4>MedAI Assistant</h4>
+
+                    <p>
+                        AI-powered health assessment
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="secure-session">
+
+                <i class="fa-solid fa-shield-halved"></i>
+
+                Anonymous session
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             CHAT MESSAGES
+        ========================= -->
+
+        <div class="chat-messages"
+             id="chatMessages">
+
+
+            <!-- Welcome message -->
+
+            <div class="message-row assistant-row">
+
+                <div class="message-avatar">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+
+                <div class="message-content">
+
+                    <div class="message assistant-message">
+
+                        <p>
+                            Hello! I'm your MedAI Medical Assistant.
+                        </p>
+
+                        <p>
+                            I can help you understand the symptoms
+                            you're experiencing by asking a few
+                            questions and providing general health
+                            information.
+                        </p>
+
+                        <p class="message-warning">
+
+                            <i class="fa-solid fa-circle-info"></i>
+
+                            I don't provide a confirmed medical
+                            diagnosis.
+                        </p>
+
+                    </div>
+
+                    <span class="message-time">
+                        Just now
+                    </span>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- Conversation starter -->
+
+            <div class="message-row assistant-row">
+
+                <div class="message-avatar">
+
+                    <i class="fa-solid fa-robot"></i>
+
+                </div>
+
+
+                <div class="message-content">
+
+                    <div class="message assistant-message">
+
+                        <p>
+                            To get started, please describe the
+                            symptoms you're experiencing.
+                        </p>
+
+                        <p>
+                            For example:
+                            <em>
+                                "I've had a headache and nausea
+                                since yesterday."
+                            </em>
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- =========================
+             TYPING INDICATOR
+        ========================= -->
+
+        <div class="typing-container"
+             id="typingIndicator">
+
+            <div class="message-avatar">
+
+                <i class="fa-solid fa-robot"></i>
+
+            </div>
+
+            <div class="typing-bubble">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+            <small>
+                MedAI is thinking...
+            </small>
+
+        </div>
+
+
+
+        <!-- =========================
+             QUICK SUGGESTIONS
+        ========================= -->
+
+        <div class="quick-suggestions"
+             id="quickSuggestions">
+
+            <button class="suggestion-btn"
+                    data-message="I have a headache">
+
+                <i class="fa-solid fa-head-side-cough"></i>
+
+                Headache
+
+            </button>
+
+
+            <button class="suggestion-btn"
+                    data-message="I have stomach pain">
+
+                <i class="fa-solid fa-stomach"></i>
+
+                Stomach pain
+
+            </button>
+
+
+            <button class="suggestion-btn"
+                    data-message="I have a fever">
+
+                <i class="fa-solid fa-temperature-half"></i>
+
+                Fever
+
+            </button>
+
+
+            <button class="suggestion-btn"
+                    data-message="I have been coughing">
+
+                <i class="fa-solid fa-lungs"></i>
+
+                Cough
+
+            </button>
+
+        </div>
+
+
+
+        <!-- =========================
+             MESSAGE INPUT
+        ========================= -->
+
+        <div class="chat-input-area">
+
+            <form id="chatForm">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        rows="1"
+                        placeholder="Describe your symptoms..."
+                        autocomplete="off"></textarea>
+
+
+                    <button
+                        type="submit"
+                        id="sendBtn"
+                        class="send-btn">
+
+                        <i class="fa-solid fa-paper-plane"></i>
+
+                    </button>
+
+                </div>
+
+            </form>
+
+
+            <div class="input-footer">
+
+                <span>
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    Temporary anonymous session
+
+                </span>
+
+
+                <span>
+
+                    MedAI provides general health information
+
+                </span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</main>
+
+
+
+<!-- =========================
+     DISCLAIMER BAR
+========================= -->
+
+<div class="bottom-disclaimer">
+
+    <i class="fa-solid fa-triangle-exclamation"></i>
+
+    <span>
+        This assistant is for informational purposes only and
+        does not replace professional medical advice.
+    </span>
+
+</div>
+
+
+
+<!-- JavaScript -->
+ <script src="js/medicalknowledge.js"></script>
+<script src="js/medicalNLP.js"></script>
+
+<script src="js/chatbot.js"></script>
+
+</body>
+
+</html>

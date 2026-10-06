@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MedAI | AI Medical Assistant</title>
+
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="#">
+            <i class="fa-solid fa-heart-pulse"></i>
+            <span>Med<span class="brand-ai">AI</span></span>
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+            <i class="fa-solid fa-bars"></i>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+
+            <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#features">Features</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#safety">Safety</a>
+                </li>
+
+                <li class="nav-item ms-lg-3">
+                    <a href="chatbot.html" class="nav-start">
+                        Start Assessment
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+</nav>
+
+
+<!-- ================= HERO SECTION ================= -->
+
+<section class="hero" id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <!-- LEFT SIDE -->
+
+            <div class="col-lg-6 hero-content">
+
+                <div class="small-badge">
+                    <i class="fa-solid fa-sparkles"></i>
+                    AI-POWERED HEALTH ASSISTANCE
+                </div>
+
+                <h1>
+                    Understand your
+                    <span>symptoms.</span>
+                    <br>
+                    Get informed guidance.
+                </h1>
+
+                <p class="hero-description">
+                    MedAI is an intelligent medical assistant that
+                    helps you understand your reported symptoms,
+                    asks relevant follow-up questions, and provides
+                    general health guidance.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="chatbot.html" class="btn-primary-custom">
+                        Get Started
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                    <a href="#about" class="btn-secondary-custom">
+                        Learn More
+                    </a>
+
+                </div>
+
+                <div class="hero-note">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <span>
+                        Your conversation is handled as a temporary
+                        anonymous session.
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="col-lg-6">
+
+                <div class="medical-visual">
+
+                    <div class="circle-background"></div>
+
+                    <div class="doctor-card">
+
+                        <div class="doctor-image">
+
+                            <img src="assets/doctor.jpg"
+                                 alt="AI Medical Assistant">
+
+                        </div>
+
+                        <div class="doctor-info">
+
+                            <h5>
+                                AI Medical Assistant
+                            </h5>
+
+                            <p>
+                                Intelligent health guidance
+                            </p>
+
+                            <div class="status">
+
+                                <span class="status-dot"></span>
+
+                                Assistant online
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING CARD 1 -->
+
+                    <div class="floating-card symptoms-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-notes-medical"></i>
+                        </div>
+
+                        <div>
+                            <strong>Symptom Analysis</strong>
+                            <small>AI-assisted assessment</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- FLOATING CARD 2 -->
+
+                    <div class="floating-card secure-card">
+
+                        <div class="floating-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+
+                        <div>
+                            <strong>Safety First</strong>
+                            <small>Red-flag detection</small>
+                        </div>
+
+                    </div>
+
+
+                    <!-- CHAT PREVIEW -->
+
+                    <div class="chat-preview">
+
+                        <div class="chat-header">
+
+                            <div class="chat-avatar">
+                                <i class="fa-solid fa-robot"></i>
+                            </div>
+
+                            <div>
+                                <strong>MedAI Assistant</strong>
+                                <small>Online</small>
+                            </div>
+
+                            <i class="fa-solid fa-ellipsis ms-auto"></i>
+
+                        </div>
+
+                        <div class="chat-body">
+
+                            <div class="message ai-message">
+
+                                Hello! I'm your AI Medical Assistant.
+                                What symptoms are you experiencing?
+
+                            </div>
+
+                            <div class="message user-message">
+
+                                I've had a headache since yesterday.
+
+                            </div>
+
+                            <div class="message ai-message">
+
+                                I can help you understand that.
+                                I'll ask a few questions first.
+
+                            </div>
+
+                        </div>
+
+                        <div class="chat-input">
+
+                            <span>Describe your symptoms...</span>
+
+                            <button>
+                                <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section class="about-section" id="about">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>ABOUT MEDAI</span>
+
+            <h2>
+                A smarter way to understand
+                your health concerns.
+            </h2>
+
+            <p>
+                MedAI uses artificial intelligence and a structured
+                medical knowledge base to help users make sense of
+                symptoms before seeking professional medical care.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-comments"></i>
+                    </div>
+
+                    <h4>Conversational</h4>
+
+                    <p>
+                        Describe your symptoms naturally instead of
+                        filling out complicated medical forms.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-brain"></i>
+                    </div>
+
+                    <h4>AI-Assisted</h4>
+
+                    <p>
+                        The system analyzes reported symptoms and
+                        identifies possible health conditions.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        <i class="fa-solid fa-user-shield"></i>
+                    </div>
+
+                    <h4>Safety Focused</h4>
+
+                    <p>
+                        Potential warning signs are identified so
+                        users can be directed toward appropriate care.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FEATURES ================= -->
+
+<section class="features-section" id="features">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <span>WHAT MEDAI CAN DO</span>
+
+            <h2>
+                From symptoms to useful guidance.
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <h5>Symptom Analysis</h5>
+
+                    <p>
+                        Identify and organize symptoms described
+                        by the user.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-list-check"></i>
+
+                    <h5>Follow-up Questions</h5>
+
+                    <p>
+                        Ask relevant questions to gather additional
+                        information.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-stethoscope"></i>
+
+                    <h5>Possible Conditions</h5>
+
+                    <p>
+                        Present conditions that may be consistent
+                        with the reported symptoms.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="feature-box">
+
+                    <i class="fa-solid fa-triangle-exclamation"></i>
+
+                    <h5>Safety Alerts</h5>
+
+                    <p>
+                        Detect potential warning signs requiring
+                        professional attention.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SAFETY ================= -->
+
+<section class="safety-section" id="safety">
+
+    <div class="container">
+
+        <div class="safety-box">
+
+            <div class="safety-icon">
+
+                <i class="fa-solid fa-circle-exclamation"></i>
+
+            </div>
+
+            <div>
+
+                <h3>Important Health Disclaimer</h3>
+
+                <p>
+                    MedAI is an educational and informational
+                    assistant. It does not provide a medical
+                    diagnosis and does not replace a qualified
+                    healthcare professional. If you have severe,
+                    worsening, or emergency symptoms, seek
+                    professional medical care immediately.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta-section">
+
+    <div class="container">
+
+        <div class="cta-content">
+
+            <h2>
+                Ready to understand your symptoms?
+            </h2>
+
+            <p>
+                Start a conversation with MedAI and provide
+                information about what you're experiencing.
+            </p>
+
+            <a href="chatbot.html" class="btn-primary-custom">
+
+                Start Assessment
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-content">
+
+            <div>
+
+                <a class="navbar-brand" href="#">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                    Med<span class="brand-ai">AI</span>
+                </a>
+
+                <p>
+                    AI-assisted symptom assessment and
+                    health guidance.
+                </p>
+
+            </div>
+
+            <div class="footer-copy">
+
+                © 2026 MedAI. Academic Project.
+
+            </div>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/medicalNLP.js"></script>
+<script src="js/medicalKnowledge.js"></script>
+<script src="js/chatbot.js"></script>
+</body>
+</html>

@@ -1,0 +1,673 @@
+/* =========================
+   GLOBAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #172b4d;
+    background: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    padding: 18px 0;
+    background: rgba(255, 255, 255, 0.94);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #edf1f5;
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-size: 25px;
+    font-weight: 800;
+    color: #123b5d;
+}
+
+.navbar-brand i {
+    color: #16a6a1;
+    margin-right: 7px;
+}
+
+.brand-ai {
+    color: #16a6a1;
+}
+
+.nav-link {
+    color: #536273;
+    font-weight: 600;
+    margin-left: 25px;
+}
+
+.nav-link:hover {
+    color: #16a6a1;
+}
+
+.nav-start {
+    background: #16a6a1;
+    color: white;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+.nav-start:hover {
+    color: white;
+    background: #108c88;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    padding: 150px 0 90px;
+    background:
+        linear-gradient(120deg, #f3fbfc 0%, #ffffff 55%, #edf8f8 100%);
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+}
+
+.small-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 30px;
+    background: #e2f6f5;
+    color: #108c88;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(42px, 5vw, 67px);
+    line-height: 1.08;
+    font-weight: 800;
+    color: #123b5d;
+    margin-bottom: 25px;
+}
+
+.hero h1 span {
+    color: #16a6a1;
+}
+
+.hero-description {
+    font-size: 18px;
+    line-height: 1.7;
+    color: #657486;
+    max-width: 600px;
+    margin-bottom: 32px;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.hero-buttons {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary-custom {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 25px;
+    background: #16a6a1;
+    color: white;
+    border-radius: 9px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    color: white;
+    background: #108c88;
+    transform: translateY(-2px);
+}
+
+.btn-secondary-custom {
+    padding: 14px 25px;
+    color: #123b5d;
+    border: 1px solid #cbd9df;
+    border-radius: 9px;
+    font-weight: 700;
+}
+
+.btn-secondary-custom:hover {
+    color: #16a6a1;
+    border-color: #16a6a1;
+}
+
+.hero-note {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-top: 28px;
+    color: #738292;
+    font-size: 13px;
+}
+
+.hero-note i {
+    color: #16a6a1;
+    font-size: 18px;
+}
+
+
+/* =========================
+   MEDICAL VISUAL
+========================= */
+
+.medical-visual {
+    position: relative;
+    height: 570px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-background {
+    position: absolute;
+    width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    background: #dff4f4;
+    opacity: 0.8;
+}
+
+.doctor-card {
+    position: absolute;
+    width: 330px;
+    height: 430px;
+    border-radius: 25px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 25px 70px rgba(18, 59, 93, 0.16);
+    z-index: 2;
+}
+
+.doctor-image {
+    height: 300px;
+    background: #d8eeee;
+    overflow: hidden;
+}
+
+.doctor-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-info {
+    padding: 20px;
+}
+
+.doctor-info h5 {
+    color: #123b5d;
+    margin-bottom: 5px;
+}
+
+.doctor-info p {
+    color: #778694;
+    margin-bottom: 10px;
+}
+
+.status {
+    font-size: 13px;
+    color: #16a6a1;
+    font-weight: 600;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #19c37d;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+
+/* =========================
+   FLOATING CARDS
+========================= */
+
+.floating-card {
+    position: absolute;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 13px 17px;
+    border-radius: 12px;
+    box-shadow: 0 12px 35px rgba(18, 59, 93, 0.14);
+}
+
+.floating-card strong {
+    display: block;
+    font-size: 13px;
+    color: #123b5d;
+}
+
+.floating-card small {
+    display: block;
+    color: #84909c;
+    margin-top: 3px;
+}
+
+.floating-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e4f7f6;
+    color: #16a6a1;
+}
+
+.symptoms-card {
+    top: 85px;
+    left: 10px;
+}
+
+.secure-card {
+    bottom: 80px;
+    right: 0;
+}
+
+
+/* =========================
+   CHAT PREVIEW
+========================= */
+
+.chat-preview {
+    position: absolute;
+    width: 300px;
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(18, 59, 93, 0.18);
+    right: -20px;
+    top: 20px;
+    z-index: 6;
+}
+
+.chat-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    background: #123b5d;
+    color: white;
+}
+
+.chat-avatar {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #16a6a1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.chat-header strong {
+    display: block;
+    font-size: 13px;
+}
+
+.chat-header small {
+    font-size: 11px;
+    opacity: 0.7;
+}
+
+.chat-body {
+    padding: 15px;
+    background: #f7fafb;
+}
+
+.message {
+    padding: 10px 12px;
+    border-radius: 12px;
+    font-size: 12px;
+    line-height: 1.5;
+    margin-bottom: 10px;
+    max-width: 90%;
+}
+
+.ai-message {
+    background: white;
+    color: #526170;
+    border: 1px solid #e7edf0;
+}
+
+.user-message {
+    background: #16a6a1;
+    color: white;
+    margin-left: auto;
+}
+
+.chat-input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    color: #a0aab3;
+    font-size: 11px;
+    border-top: 1px solid #e7edf0;
+}
+
+.chat-input button {
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: #16a6a1;
+    color: white;
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+.about-section,
+.features-section,
+.safety-section {
+    padding: 100px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 55px;
+}
+
+.section-heading span {
+    color: #16a6a1;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.section-heading h2 {
+    margin: 12px 0 15px;
+    font-size: 40px;
+    color: #123b5d;
+    font-weight: 800;
+}
+
+.section-heading p {
+    color: #71808e;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   INFO CARDS
+========================= */
+
+.info-card {
+    padding: 35px 30px;
+    border: 1px solid #e6edf0;
+    border-radius: 15px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(18, 59, 93, 0.08);
+}
+
+.info-icon {
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    background: #e3f7f6;
+    color: #16a6a1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.info-card h4 {
+    color: #123b5d;
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    color: #71808e;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features-section {
+    background: #f5fafb;
+}
+
+.feature-box {
+    background: white;
+    padding: 30px 25px;
+    border-radius: 14px;
+    height: 100%;
+    border: 1px solid #e9eff2;
+}
+
+.feature-box > i {
+    font-size: 26px;
+    color: #16a6a1;
+    margin-bottom: 20px;
+}
+
+.feature-box h5 {
+    color: #123b5d;
+}
+
+.feature-box p {
+    color: #71808e;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SAFETY
+========================= */
+
+.safety-section {
+    background: white;
+}
+
+.safety-box {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 15px;
+    background: #fff8eb;
+    border: 1px solid #f4dfb5;
+}
+
+.safety-icon {
+    color: #d99000;
+    font-size: 30px;
+}
+
+.safety-box h3 {
+    color: #5e4820;
+    font-size: 21px;
+}
+
+.safety-box p {
+    color: #776749;
+    line-height: 1.7;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta-section {
+    padding: 90px 0;
+    background: #123b5d;
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 700px;
+    margin: auto;
+}
+
+.cta-content h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.cta-content p {
+    color: #cbd9e3;
+    margin: 15px 0 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #0d2b43;
+    padding: 35px 0;
+}
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.footer-content .navbar-brand {
+    color: white;
+}
+
+.footer-content p {
+    color: #9fb1bf;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.footer-copy {
+    color: #8da1af;
+    font-size: 13px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 991px) {
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero-content {
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons,
+    .hero-note {
+        justify-content: center;
+    }
+
+    .medical-visual {
+        height: 500px;
+    }
+
+    .chat-preview {
+        right: 0;
+    }
+
+    .symptoms-card {
+        left: 0;
+    }
+}
+
+
+@media (max-width: 576px) {
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .medical-visual {
+        transform: scale(0.8);
+        margin-left: -10%;
+        width: 120%;
+    }
+
+    .section-heading h2 {
+        font-size: 32px;
+    }
+
+    .floating-card {
+        display: none;
+    }
+
+    .chat-preview {
+        right: -20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+}
